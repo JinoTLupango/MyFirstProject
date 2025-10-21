@@ -25,9 +25,9 @@ namespace MyFirstProject
         private void btnRegister_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtFirstname.Text) ||
-        string.IsNullOrWhiteSpace(txtLastname.Text) ||
-        string.IsNullOrWhiteSpace(txtEmail.Text) ||
-        string.IsNullOrWhiteSpace(txtPassword.Text))
+                 string.IsNullOrWhiteSpace(txtLastname.Text) ||
+                 string.IsNullOrWhiteSpace(txtEmail.Text) ||
+                 string.IsNullOrWhiteSpace(txtPassword.Text))
             {
                 MessageBox.Show("Please fill out all fields.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;

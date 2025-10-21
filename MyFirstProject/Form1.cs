@@ -20,6 +20,7 @@ namespace MyFirstProject
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+
         {
 
         }
@@ -27,6 +28,21 @@ namespace MyFirstProject
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtUsername.Text) ||
+                string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                MessageBox.Show("Please fill out all fields.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            DialogResult result = MessageBox.Show("? Successfully Log in!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            frmBooking booking = new frmBooking();
+            booking.ShowDialog();
         }
     }
 }
