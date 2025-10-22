@@ -47,5 +47,10 @@ namespace MyFirstProject
             cmbCheckoutTime.Items.Add("5:00 PM");
 
         }
+
+        private void btnBookNow_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

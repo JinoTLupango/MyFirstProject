@@ -66,12 +66,14 @@
             lblAdults = new Label();
             lblChildren = new Label();
             btnBookNow = new Button();
+            BtnX = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.DarkTurquoise;
+            panel1.Controls.Add(BtnX);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(1, 1);
             panel1.Name = "panel1";
@@ -414,6 +416,18 @@
             btnBookNow.TabIndex = 36;
             btnBookNow.Text = "BOOK NOW!";
             btnBookNow.UseVisualStyleBackColor = false;
+            btnBookNow.Click += btnBookNow_Click;
+            // 
+            // BtnX
+            // 
+            BtnX.BackColor = Color.Red;
+            BtnX.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BtnX.Location = new Point(661, 11);
+            BtnX.Name = "BtnX";
+            BtnX.Size = new Size(32, 29);
+            BtnX.TabIndex = 37;
+            BtnX.Text = "X";
+            BtnX.UseVisualStyleBackColor = false;
             // 
             // frmReservation
             // 
@@ -506,5 +520,6 @@
         private Label lblAdults;
         private Label lblChildren;
         private Button btnBookNow;
+        private Button BtnX;
     }
 }
