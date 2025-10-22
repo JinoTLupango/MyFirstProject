@@ -36,7 +36,7 @@
             btnRegister = new Button();
             txtFirstname = new TextBox();
             txtLastname = new TextBox();
-            txtEmail = new TextBox();
+            txtUsername = new TextBox();
             txtPassword = new TextBox();
             label1 = new Label();
             panel1.SuspendLayout();
@@ -52,7 +52,7 @@
             panel1.Controls.Add(btnRegister);
             panel1.Controls.Add(txtFirstname);
             panel1.Controls.Add(txtLastname);
-            panel1.Controls.Add(txtEmail);
+            panel1.Controls.Add(txtUsername);
             panel1.Controls.Add(txtPassword);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(62, 36);
@@ -64,7 +64,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Times New Roman", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(63, 234);
+            label5.Location = new Point(50, 214);
             label5.Name = "label5";
             label5.Size = new Size(49, 14);
             label5.TabIndex = 10;
@@ -74,17 +74,17 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(63, 184);
+            label4.Location = new Point(50, 164);
             label4.Name = "label4";
-            label4.Size = new Size(71, 14);
+            label4.Size = new Size(53, 14);
             label4.TabIndex = 9;
-            label4.Text = "Email Address";
+            label4.Text = "Username";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(63, 135);
+            label3.Location = new Point(50, 115);
             label3.Name = "label3";
             label3.Size = new Size(57, 14);
             label3.TabIndex = 8;
@@ -95,7 +95,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(63, 83);
+            label2.Location = new Point(50, 63);
             label2.Name = "label2";
             label2.Size = new Size(58, 14);
             label2.TabIndex = 7;
@@ -104,7 +104,7 @@
             // btnRegister
             // 
             btnRegister.BackColor = Color.PaleTurquoise;
-            btnRegister.Location = new Point(51, 262);
+            btnRegister.Location = new Point(50, 285);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(185, 24);
             btnRegister.TabIndex = 6;
@@ -114,28 +114,28 @@
             // 
             // txtFirstname
             // 
-            txtFirstname.Location = new Point(51, 57);
+            txtFirstname.Location = new Point(50, 80);
             txtFirstname.Name = "txtFirstname";
             txtFirstname.Size = new Size(185, 23);
             txtFirstname.TabIndex = 5;
             // 
             // txtLastname
             // 
-            txtLastname.Location = new Point(51, 109);
+            txtLastname.Location = new Point(50, 132);
             txtLastname.Name = "txtLastname";
             txtLastname.Size = new Size(185, 23);
             txtLastname.TabIndex = 4;
             // 
-            // txtEmail
+            // txtUsername
             // 
-            txtEmail.Location = new Point(51, 158);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(185, 23);
-            txtEmail.TabIndex = 3;
+            txtUsername.Location = new Point(50, 181);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(185, 23);
+            txtUsername.TabIndex = 3;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(51, 208);
+            txtPassword.Location = new Point(50, 231);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(185, 23);
             txtPassword.TabIndex = 2;
@@ -159,6 +159,7 @@
             Controls.Add(panel1);
             Name = "frmRegister";
             Text = "Register";
+            Load += frmRegister_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -170,7 +171,7 @@
         private Label label1;
         private TextBox txtFirstname;
         private TextBox txtLastname;
-        private TextBox txtEmail;
+        private TextBox txtUsername;
         private TextBox txtPassword;
         private Button btnRegister;
         private Label label5;

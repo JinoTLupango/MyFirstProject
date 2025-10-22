@@ -428,6 +428,7 @@
             BtnX.TabIndex = 37;
             BtnX.Text = "X";
             BtnX.UseVisualStyleBackColor = false;
+            BtnX.Click += BtnX_Click;
             // 
             // frmReservation
             // 

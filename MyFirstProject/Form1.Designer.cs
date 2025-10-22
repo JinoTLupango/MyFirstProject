@@ -53,7 +53,7 @@
             panel1.Controls.Add(txtPassword);
             panel1.Controls.Add(txtUsername);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(51, 43);
+            panel1.Location = new Point(54, 41);
             panel1.Name = "panel1";
             panel1.Size = new Size(291, 327);
             panel1.TabIndex = 0;
