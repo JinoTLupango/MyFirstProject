@@ -71,7 +71,7 @@ namespace MyFirstProject
                 {
                     conn.Open();
 
-                    string query = @"INSERT INTO Reservations 
+                    string query = @"INSERT INTO Reservation 
                                     (first_name, Last_name, address1, address2, city, state, zip_code, phone_no, email_address, 
                                      check_in_date, check_in_time, check_out_date, check_out_time, adults, children)
                                      VALUES
