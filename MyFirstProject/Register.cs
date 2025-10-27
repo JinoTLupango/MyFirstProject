@@ -75,6 +75,8 @@ namespace MyFirstProject
                 {
                     MessageBox.Show("❌ Error: " + ex.Message);
                 }
+
+                
             }
             // Show success message
             DialogResult result = MessageBox.Show("✅ Successfully Signed Up!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

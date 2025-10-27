@@ -22,6 +22,10 @@ namespace MyFirstProject
 
             // After Register form is closed, show the login form again
             this.Show();
+
+            this.Hide(); // hides the current form
+            frmRegister registerForm = new frmRegister();
+            registerForm.Show();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            BtnX = new Button();
             label1 = new Label();
             label2 = new Label();
             txtFirstname = new TextBox();
@@ -66,7 +67,6 @@
             lblAdults = new Label();
             lblChildren = new Label();
             btnBookNow = new Button();
-            BtnX = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -79,6 +79,18 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(705, 77);
             panel1.TabIndex = 0;
+            // 
+            // BtnX
+            // 
+            BtnX.BackColor = Color.Red;
+            BtnX.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BtnX.Location = new Point(586, 18);
+            BtnX.Name = "BtnX";
+            BtnX.Size = new Size(32, 29);
+            BtnX.TabIndex = 37;
+            BtnX.Text = "X";
+            BtnX.UseVisualStyleBackColor = false;
+            BtnX.Click += BtnX_Click;
             // 
             // label1
             // 
@@ -418,23 +430,11 @@
             btnBookNow.UseVisualStyleBackColor = false;
             btnBookNow.Click += btnBookNow_Click;
             // 
-            // BtnX
-            // 
-            BtnX.BackColor = Color.Red;
-            BtnX.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            BtnX.Location = new Point(661, 11);
-            BtnX.Name = "BtnX";
-            BtnX.Size = new Size(32, 29);
-            BtnX.TabIndex = 37;
-            BtnX.Text = "X";
-            BtnX.UseVisualStyleBackColor = false;
-            BtnX.Click += BtnX_Click;
-            // 
             // frmReservation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(706, 615);
+            ClientSize = new Size(644, 615);
             Controls.Add(btnBookNow);
             Controls.Add(lblChildren);
             Controls.Add(lblAdults);

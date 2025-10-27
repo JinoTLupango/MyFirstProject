@@ -28,18 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dgvDashboard = new DataGridView();
             btnX = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            txtSearch = new TextBox();
+            btnxSearch = new Button();
+            btnxDelete = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvDashboard).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvDashboard
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(45, 101);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(667, 417);
-            dataGridView1.TabIndex = 0;
+            dgvDashboard.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDashboard.Location = new Point(45, 101);
+            dgvDashboard.Name = "dgvDashboard";
+            dgvDashboard.Size = new Size(715, 332);
+            dgvDashboard.TabIndex = 0;
             // 
             // btnX
             // 
@@ -53,23 +56,61 @@
             btnX.UseVisualStyleBackColor = false;
             btnX.Click += btnX_Click;
             // 
+            // txtSearch
+            // 
+            txtSearch.BackColor = SystemColors.ScrollBar;
+            txtSearch.Location = new Point(134, 454);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(231, 23);
+            txtSearch.TabIndex = 40;
+            // 
+            // btnxSearch
+            // 
+            btnxSearch.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnxSearch.Location = new Point(44, 453);
+            btnxSearch.Name = "btnxSearch";
+            btnxSearch.Size = new Size(75, 23);
+            btnxSearch.TabIndex = 41;
+            btnxSearch.Text = "Search";
+            btnxSearch.UseVisualStyleBackColor = true;
+            btnxSearch.Click += btnxSearch_Click;
+            // 
+            // btnxDelete
+            // 
+            btnxDelete.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnxDelete.Location = new Point(482, 453);
+            btnxDelete.Name = "btnxDelete";
+            btnxDelete.Size = new Size(75, 23);
+            btnxDelete.TabIndex = 42;
+            btnxDelete.Text = "Delete";
+            btnxDelete.UseVisualStyleBackColor = true;
+            btnxDelete.Click += btnxDelete_Click;
+            // 
             // frmDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkTurquoise;
             ClientSize = new Size(800, 584);
+            Controls.Add(btnxDelete);
+            Controls.Add(btnxSearch);
+            Controls.Add(txtSearch);
             Controls.Add(btnX);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvDashboard);
             Name = "frmDashboard";
             Text = "Dashboard";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += frmDashboard_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvDashboard).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgvDashboard;
         private Button btnX;
+        private TextBox txtSearch;
+        private Button btnxSearch;
+        private Button btnxDelete;
     }
 }

@@ -108,8 +108,8 @@ namespace MyFirstProject
                 }
 
 
-                //frmDashboard dashboard = new frmDashboard();
-                //dashboard.ShowDialog();
+                frmDashboard dashboard = new frmDashboard();
+                dashboard.ShowDialog();
             }
         }
 
@@ -145,8 +145,8 @@ namespace MyFirstProject
 
         private void BtnX_Click(object sender, EventArgs e)
         {
-           // frmBooking book = new frmBooking();
-           // book.ShowDialog();
+            frmBooking book = new frmBooking();
+            book.ShowDialog();
         }
     }
 }
