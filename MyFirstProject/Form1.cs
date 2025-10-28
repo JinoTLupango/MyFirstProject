@@ -15,17 +15,9 @@ namespace MyFirstProject
         private void btnRegister_Click(object sender, EventArgs e)
         {
             this.Hide();
-
-            // Open the Register form
-            frmRegister register = new frmRegister();
-            register.ShowDialog();
-
-            // After Register form is closed, show the login form again
-            this.Show();
-
-            this.Hide(); // hides the current form
             frmRegister registerForm = new frmRegister();
-            registerForm.Show();
+            registerForm.ShowDialog();
+            this.Show();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -57,20 +49,35 @@ namespace MyFirstProject
                 {
                     conn.Open();
 
-                    string query = "SELECT COUNT(*) FROM [User] WHERE Username = @username AND Password = @password";
+                    // ? Retrieve role from Register table
+                    string query = "SELECT role FROM Register WHERE username=@username AND password=@password";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@username", txtUsername.Text);
                     cmd.Parameters.AddWithValue("@password", txtPassword.Text);
 
-                    int count = (int)cmd.ExecuteScalar();
+                    object roleObj = cmd.ExecuteScalar();
 
-                    if (count > 0)
+                    if (roleObj != null)
                     {
-                        MessageBox.Show("Successfully Logged In!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string role = roleObj.ToString();
+
+                        MessageBox.Show($"Welcome, {role}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         this.Hide();
-                        frmBooking booking = new frmBooking();
-                        booking.ShowDialog();
+
+                        if (role == "Admin")
+                        {
+                            // ?? Go to Admin Dashboard
+                            frmAdminDashboard adminForm = new frmAdminDashboard();
+                            adminForm.ShowDialog();
+                        }
+                        else
+                        {
+                            // ?? Go to Booking Form (User Dashboard)
+                            frmBooking booking = new frmBooking();
+                            booking.ShowDialog();
+                        }
+
                         this.Show();
                     }
                     else

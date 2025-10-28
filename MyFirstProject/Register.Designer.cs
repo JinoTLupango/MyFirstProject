@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            cmbRole = new ComboBox();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
@@ -45,6 +46,7 @@
             // panel1
             // 
             panel1.BackColor = Color.DarkTurquoise;
+            panel1.Controls.Add(cmbRole);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
@@ -57,8 +59,16 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(62, 36);
             panel1.Name = "panel1";
-            panel1.Size = new Size(300, 336);
+            panel1.Size = new Size(300, 359);
             panel1.TabIndex = 0;
+            // 
+            // cmbRole
+            // 
+            cmbRole.FormattingEnabled = true;
+            cmbRole.Location = new Point(50, 275);
+            cmbRole.Name = "cmbRole";
+            cmbRole.Size = new Size(185, 23);
+            cmbRole.TabIndex = 11;
             // 
             // label5
             // 
@@ -104,7 +114,7 @@
             // btnRegister
             // 
             btnRegister.BackColor = Color.PaleTurquoise;
-            btnRegister.Location = new Point(50, 285);
+            btnRegister.Location = new Point(50, 320);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(185, 24);
             btnRegister.TabIndex = 6;
@@ -178,5 +188,6 @@
         private Label label4;
         private Label label3;
         private Label label2;
+        private ComboBox cmbRole;
     }
 }
